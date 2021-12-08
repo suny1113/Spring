@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="imple" class="spring_aop.advice.CustomerServiceImple">
+		<property name="email" value="suny1113@naver.com" />
+		<property name="name" value="HS" />
+	</bean>
+	
+	<bean id="nt" class="spring_aop.advice.NowTime"></bean>
+	<bean id="nt2" class="spring_aop.advice.NowTime2"></bean>
+	<bean id="te" class="spring_aop.advice.ThrowExcept"></bean>
+	<bean id="cmt" class="spring_aop.advice.CheckMethodTime"></bean>
+
+	<!-- 1. 메서드 호출 전 수행 (MethodBeforeAdvice) -->
+	<bean id="cs1" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="imple" />
+		<property name="interceptorNames">
+			<list>
+				<value>nt</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 2. 메서드가 정상적으로 수행된 후 반환된 뒤 수행 (AfterReturningAdvice) -->
+	<bean id="cs2" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="imple" />
+		<property name="interceptorNames">
+			<list>
+				<value>nt2</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 3. 예외가 발생된 시점에 수행 (ThrowsAdvice) -->
+	<bean id="cs3" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="imple" />
+		<property name="interceptorNames">
+			<list>
+				<value>te</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 4. 메서드 실행 전후 어드바이스 기능 수행 -->
+	<bean id="cs4" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="imple" />
+		<property name="interceptorNames">
+			<list>
+				<value>cmt</value>
+			</list>
+		</property>
+	</bean>
+	
+
+</beans>

@@ -1,10 +1,12 @@
-package spring_DI_annotation;
+package spring_DI.javaConfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-public class Jet implements Plain{
+public class Jet implements Plain {
 
 	@Autowired
+	@Qualifier("m")
 	Missile m;
 	
 	@Override
@@ -21,9 +23,8 @@ public class Jet implements Plain{
 
 	@Override
 	public void fly() {
-		System.out.println("비행중");
+		System.out.println("비행중..");
 		m.fire();
-		
 	}
 
 }

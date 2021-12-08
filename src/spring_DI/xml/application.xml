@@ -3,9 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean id="m" class="spring_DI_xml.Missile"></bean>
+	<bean id="m" class="spring_DI.xml.Missile"></bean>
 	
-	<bean id="p" class="spring_DI_xml.Jet">
+	<bean id="p" class="spring_DI.xml.Jet">
 		<!-- setterDI -->
 		<property name="m" ref="m" />
 		

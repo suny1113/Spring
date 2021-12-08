@@ -1,14 +1,21 @@
-package spring_DI_javaConfig;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+package spring_DI.xml;
 
 public class Jet implements Plain {
 
-	@Autowired
-	@Qualifier("m")
 	Missile m;
 	
+	// setterDI
+	public void setM(Missile m) {
+		this.m = m;
+	}
+	
+	// constructorDI
+//	public Jet(Missile m) {
+//		super();
+//		this.m = m;
+//	}
+
+
 	@Override
 	public void takeoff() {
 		System.out.println("이륙");

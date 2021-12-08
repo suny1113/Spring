@@ -1,4 +1,4 @@
-package spring_DI_javaConfig;
+package spring_DI.javaConfig;
 
 public class Missile {
 	

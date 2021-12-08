@@ -1,4 +1,4 @@
-package spring_DI_javaConfig;
+package spring_DI.javaConfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

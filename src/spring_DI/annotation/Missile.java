@@ -1,4 +1,4 @@
-package spring_DI_annotation;
+package spring_DI.annotation;
 
 public class Missile {
 	

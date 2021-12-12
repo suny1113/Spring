@@ -4,18 +4,18 @@
 - xml파일에 bean을 등록해서 의존성을 주입
   - setter 메서드를 이용한 의존성 주입 : property
   - 생성자를 이용한 의존성 주입 : constructor-arg
-  - [spring_DI_xml](https://github.com/suny1113/Spring/tree/main/src/spring_DI_xml)
+  - [spring_DI_xml](https://github.com/suny1113/Spring/tree/main/src/spring_DI/xml)
 
 
 - @Autowired 어노테이션을 이용한 의존성 주입
   - xml파일의 namespace -> context 클릭 -> context:annotation-config
-  - [spring_DI_annotation](https://github.com/suny1113/Spring/tree/main/src/spring_DI_annotation)
+  - [spring_DI_annotation](https://github.com/suny1113/Spring/tree/main/src/spring_DI/annotation)
   
 
 - javaConfig를 통한 의존성 주입
   - xml파일에 bean을 등록하지 않고 자바 클래스에 bean을 등록
   - @Configuration 어노테이션과 @Bean 어노테이션 사용
-  - [spring_DI_javaConfig](https://github.com/suny1113/Spring/tree/main/src/spring_DI_javaConfig)
+  - [spring_DI_javaConfig](https://github.com/suny1113/Spring/tree/main/src/spring_DI/javaConfig)
 
 ## Spring_AOP (관점 지향 프로그래밍)
 - 여러 객체에 공통으로 적용할 수 있는 기능을 분리함으로써 재사용을 높여주는 프로그래밍 기법
@@ -32,7 +32,7 @@
 
 - Spring에서는 런타임 시 Proxy 객체를 생성해서 공통기능을 추가하는 방법을 사용한다.
 
-### [advice](Spring/src/spring_aop/advice) 의 종류
+### [advice](https://github.com/suny1113/Spring/tree/main/src/spring_aop/advice) 의 종류
 |종류|설명|
 |---|----|
 |MethodBeforeAdvice|메서드가 호출되기 전 공통기능을 수행|
@@ -43,6 +43,6 @@
 ### Aspectj
 -AOP의 확장기능
 
--[Aspectj설정](Spring/src/spring_aop/aspectj)
+-[Aspectj설정](https://github.com/suny1113/Spring/tree/main/src/spring_aop/aspectj)
 
--[어노테이션활용](Spring/src/spring_aop/aspectj_annotation)
+-[어노테이션활용](https://github.com/suny1113/Spring/tree/main/src/spring_aop/aspectj_annotation)
